@@ -1,0 +1,12 @@
+body{
+    background-color: #fff8e8;
+
+}
+
+.display{
+    color:yellow;
+}
+
+html>body>div#d{
+     background-color: #f1ff20;
+}

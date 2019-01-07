@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Customer Details</title>
+
+
+    <link rel="stylesheet"  href="{{ url_for('static', filename= 'display.css') }}">
+
+
+  </head>
+
+  <body>
+    <div id="d">
+    <p style="text-align:center;color:   #ff6f69;font-family: fantasy;font-size: 35px;t">Confirmation Details:</p>
+    </div>
+    <div class="container-theme-showcase" role="main" style="text-align:center;width: 600px; border: 10px solid #a2aab4;position:relative;left:500px; border-radius: 10px;  ">
+
+
+
+      <h1 style="text-align:center;font-family: cursive;">First Name: {{ name }}</h1>
+      <h1 style="text-align:center;font-family: cursive;">Last Name: {{ name1 }}</h1>
+      <h1 style="text-align:center;font-family: cursive;">Address: {{ Address }}</h1>
+      <h1 style="text-align:center;font-family: cursive;">Phone: {{phone}}</h1>
+      <h1 style="text-align:center;font-family: cursive;">Selects: {{ selects }}</h1>
+    </div> <!-- /container -->
+      <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top" >
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="K9MNH4W568MA8" id="button">
+        <input style="display:block; margin:0 auto;" type="image" src="https://www.sandbox.paypal.com/en_GB/SG/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+        <img alt="" border="0" src="https://www.sandbox.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+      </form>
+
+      <form>
+              <input type="button" value="Back" onclick="window.location.href='/'" style="position:relative;left: 500px;bottom:65px;border-radius:10px;   "/>
+
+      </form>
+
+
+
+
+  </body>
+</html>
